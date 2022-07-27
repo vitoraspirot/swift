@@ -1,10 +1,3 @@
-//
-//  JogoDaForca.swift
-//  Forca
-//
-//  Created by Treinamento on 19/07/22.
-//
-
 import Foundation
 
 class JogoDaForca {
@@ -14,9 +7,15 @@ class JogoDaForca {
     
     private(set) var palavraMascarada: String
     private(set) var tentativasAnteriores: [String] = []
-    private(set) var erros: Int = 0
+    private(set) var erros: Int = 0 {
+        didSet {
+            if erros > 5 {
+                estadoDoJogo = .perdeu
+            }
+        }
+    }
     
-    private(set) var estadoDoJogo: EstadoDoJogo = EstadoDoJogo.emAndamento
+    private(set) var estadoDoJogo: EstadoDoJogo = .emAndamento
     
     init(palavra: String, dica: String) {
         self.palavra = palavra.uppercased()
@@ -26,6 +25,7 @@ class JogoDaForca {
     }
     
     func tentar(letra: String) {
+        
         guard let letraComparavel = letra.first?.comparavel else {
             return
         }
@@ -38,18 +38,13 @@ class JogoDaForca {
         
         guard palavra.contains(letraComparavel) else {
             erros += 1
-            
-            if erros > 5 {
-                estadoDoJogo = EstadoDoJogo.perdeu
-            }
-            
             return
         }
         
         palavraMascarada = troca(letra: letraComparavel, na: palavraMascarada, original: palavra)
         
-        if palavraMascarada.comparavel == palavra {
-            estadoDoJogo = EstadoDoJogo.ganhou
+        if (palavraMascarada.comparavel == palavra) {
+            estadoDoJogo = .ganhou
         }
     }
     

@@ -1,10 +1,3 @@
-//
-//  String+Character+Comparavel.swift
-//  Forca
-//
-//  Created by Treinamento on 20/07/22.
-//
-
 import Foundation
 
 extension Character {

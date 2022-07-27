@@ -82,7 +82,7 @@ class ViewController: UIViewController {
         chutesAnterioresLabel.attributedText = formatarChutes()
         
         let image: UIImage?
-        
+        // trocar por switch case
         if jogoDaForca.estadoDoJogo == EstadoDoJogo.perdeu {
             image = UIImage(named: "bonecao_completo_e_mortinho")
         } else {
@@ -139,6 +139,7 @@ extension ViewController: UITextFieldDelegate {
             jogoDaForca.tentar(letra: texto)
         }
         
+        // trocar por switch case
         if jogoDaForca.estadoDoJogo == EstadoDoJogo.ganhou {
             alert(titulo: "Você acertou, parabéns!")
         } else if jogoDaForca.estadoDoJogo == EstadoDoJogo.perdeu {
