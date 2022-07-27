@@ -3,18 +3,23 @@ import SnapKit
 
 class ViewController: UIViewController {
 
-    lazy var restartButton: UIButton = {
+    lazy var resetButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "restart_button"), for: .normal)
-        button.addTarget(self, action: #selector(restartButtonTouched), for: .touchDown)
         
-        button.setTitle("Reiniciar  ", for: UIControl.State.normal) // switch to attributed title
+        button.setImage(UIImage(named: "restart_button"), for: .normal)
+        button.addTarget(self, action: #selector(resetButtonTouched), for: .touchDown)
+        
+        let buttonTitle = "Reiniciar  "
+        
+        button.setAttributedTitle(buttonTitle.resetButtonTitle, for: .normal)
         button.setTitleColor(.black, for: UIControl.State.normal)
         button.semanticContentAttribute = .forceRightToLeft
         
         return button
         
     }()
+    
+    private var memoryGame = MemoryGame.shuffleCards()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +30,9 @@ class ViewController: UIViewController {
         
     }
 
-    @objc func restartButtonTouched() {
-        print("click!")
-    
+    @objc func resetButtonTouched() {
+        
+        
     }
     
     func restart() {}
@@ -43,12 +48,12 @@ extension ViewController {
     }
     
     func buildViews() {
-        view.addSubview(restartButton)
-        
+        view.addSubview(resetButton)
+                
     }
     
     func buildConstraints() {
-        restartButton.snp.makeConstraints { make in
+        resetButton.snp.makeConstraints { make in
             make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(38)
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(32)
            

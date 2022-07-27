@@ -17,6 +17,7 @@
 		294A83472889A52100B67A83 /* memory_gameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294A83462889A52100B67A83 /* memory_gameTests.swift */; };
 		294A83512889A52100B67A83 /* memory_gameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294A83502889A52100B67A83 /* memory_gameUITests.swift */; };
 		294A83532889A52100B67A83 /* memory_gameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294A83522889A52100B67A83 /* memory_gameUITestsLaunchTests.swift */; };
+		29FE1468289172710083FD6A /* String+AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FE1467289172710083FD6A /* String+AttributedText.swift */; };
 		738586DEEE6B4B949F9943B2 /* Pods_memory_game_memory_gameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7395AF34B06221AFA677CC43 /* Pods_memory_game_memory_gameUITests.framework */; };
 		B789DF57818E82FA53E28FFA /* Pods_memory_gameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 084AC9076813D8A6AA15B5AB /* Pods_memory_gameTests.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		294A83502889A52100B67A83 /* memory_gameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memory_gameUITests.swift; sourceTree = "<group>"; };
 		294A83522889A52100B67A83 /* memory_gameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memory_gameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		297D145E29485CBFE42E5F7F /* Pods-memory-game-memory-gameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memory-game-memory-gameUITests.debug.xcconfig"; path = "Target Support Files/Pods-memory-game-memory-gameUITests/Pods-memory-game-memory-gameUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		29FE1467289172710083FD6A /* String+AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AttributedText.swift"; sourceTree = "<group>"; };
 		404AD800233B81AFA0A866AA /* Pods-memory-game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memory-game.release.xcconfig"; path = "Target Support Files/Pods-memory-game/Pods-memory-game.release.xcconfig"; sourceTree = "<group>"; };
 		4AF9CE2A11C4DB1F9D4CDB1B /* Pods-memory-game-memory-gameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memory-game-memory-gameUITests.release.xcconfig"; path = "Target Support Files/Pods-memory-game-memory-gameUITests/Pods-memory-game-memory-gameUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7395AF34B06221AFA677CC43 /* Pods_memory_game_memory_gameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_memory_game_memory_gameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +125,7 @@
 				294A833A2889A52100B67A83 /* LaunchScreen.storyboard */,
 				294A833D2889A52100B67A83 /* Info.plist */,
 				2908A1DB2889DCB300AB4E17 /* MemoryGame.swift */,
+				29FE1467289172710083FD6A /* String+AttributedText.swift */,
 			);
 			path = "memory-game";
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 			files = (
 				294A83342889A51F00B67A83 /* ViewController.swift in Sources */,
 				294A83302889A51F00B67A83 /* AppDelegate.swift in Sources */,
+				29FE1468289172710083FD6A /* String+AttributedText.swift in Sources */,
 				2908A1DC2889DCB300AB4E17 /* MemoryGame.swift in Sources */,
 				294A83322889A51F00B67A83 /* SceneDelegate.swift in Sources */,
 			);
