@@ -1,13 +1,16 @@
 import Foundation
+import UIKit
 
 class MemoryGame {
     
     var shuffledCards: [String] = []
+    var foundCards : [String] = []
     var numberOfAttempts: Int
     
     init(shuffledCards : [String]){
         self.shuffledCards = shuffledCards
         self.numberOfAttempts = 0
+        self.foundCards = []
     }
     
     func addAttempt(){
@@ -17,7 +20,6 @@ class MemoryGame {
     
 }
 
-
 extension MemoryGame {
     
     class func shuffleCards() -> MemoryGame {
@@ -26,17 +28,21 @@ extension MemoryGame {
         
     }
     
+    
+    
 }
 
 let cards = [
-    "DWARF",
-    "DWARF",
-    "WITCH",
-    "WITCH",
-    "ELF",
-    "ELF",
-    "KNIGHT",
-    "KNIGHT",
-    "WIZARD",
-    "WIZARD"
+    "dwarf",
+    "dwarf",
+    "witch",
+    "witch",
+    "elf",
+    "elf",
+    "knight",
+    "knight",
+    "wizard",
+    "wizard"
 ]
+
+

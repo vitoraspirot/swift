@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return UIInterfaceOrientationMask(rawValue: UIInterfaceOrientationMask.landscape.rawValue)
     }
 
-
+    
+    
+    
 }
 

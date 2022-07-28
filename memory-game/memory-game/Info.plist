@@ -19,5 +19,9 @@
 			</array>
 		</dict>
 	</dict>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationLandscape</string>
+    </array>
 </dict>
 </plist>
