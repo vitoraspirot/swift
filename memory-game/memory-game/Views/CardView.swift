@@ -4,8 +4,7 @@ import SnapKit
 
 class CardView: UIView {
     
-    let position: Int
-    let cardName: String
+    var cardName: String
     var cardState: CardState
     
     lazy var cardImage: UIImageView = {
@@ -15,8 +14,7 @@ class CardView: UIView {
         
     }()
     
-    init(position: Int, cardName: String){
-        self.position = position
+    init(cardName: String){
         self.cardName = cardName
         self.cardState = .FACE_DOWN
         
@@ -25,6 +23,7 @@ class CardView: UIView {
         configViews()
         buildViews()
         buildConstraints()
+        
     }
     
     required init?(coder: NSCoder) {

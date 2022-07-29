@@ -3,11 +3,20 @@ import SnapKit
 
 class ViewController: UIViewController {
     
+    private let cardsRange = 0...9
+    private let cardsPerLine = 5
+    private let cardsSpacing = 25
+    private let cardsHeight = 110
+    private let cardsMargin = 40
+    private let imagePadding = 10
+    private let trailingInset = 38
+    private let topOffset = 32
+
     private var memoryGame = MemoryGame.shuffleCards()
     
     lazy var resetButton: UIButton = {
         var buttonConfigs = UIButton.Configuration.borderless()
-        buttonConfigs.imagePadding = 10
+        buttonConfigs.imagePadding = CGFloat(imagePadding)
         
         let button = UIButton(configuration: buttonConfigs)
         let buttonTitle = "Reiniciar"
@@ -24,17 +33,28 @@ class ViewController: UIViewController {
     }()
     
     lazy var cards: [CardView] = {
-        var cards = [CardView]()
+        var cardList = [CardView]()
         
-        for i in 0...9{
-            let card = CardView(position: i, cardName: memoryGame.shuffledCards[i])
-            cards.append(card)
+        for i in cardsRange{
+            let card = CardView(cardName: memoryGame.shuffledCards[i])
+            cardList.append(card)
+            
         }
         
-        return cards
+        return cardList
         
     }()
     
+    func resetCards(){
+        
+        for i in cardsRange{
+            cards[i].cardName = memoryGame.shuffledCards[i]
+            cards[i].cardState = .FACE_DOWN
+            cards[i].cardImage.image = UIImage(named: "logo")
+            
+        }
+
+    }
     
     
     lazy var firstCardLineStackView: UIStackView = {
@@ -42,8 +62,8 @@ class ViewController: UIViewController {
         
         stackView.axis = .horizontal
         stackView.alignment = .center
-        stackView.spacing = 25
-
+        stackView.spacing = CGFloat(cardsSpacing)
+        
         return stackView
         
     }()
@@ -53,13 +73,17 @@ class ViewController: UIViewController {
         
         stackView.axis = .horizontal
         stackView.alignment = .center
-        stackView.spacing = 25
+        stackView.spacing = CGFloat(cardsSpacing)
         
         return stackView
         
     }()
     
-    @objc func resetButtonTouched() {}
+    @objc func resetButtonTouched() {
+        memoryGame = MemoryGame.shuffleCards()
+        resetCards()
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,7 +100,7 @@ extension ViewController {
     
     func configViews() {
         view.backgroundColor = UIColor(named: "backgroundColor")
-
+        
     }
     
     func buildViews() {
@@ -90,12 +114,14 @@ extension ViewController {
     
     func addCardsInStackViews(){
         
-        for i in 0...9{
+        for i in cardsRange{
             let card = cards[i]
-            if(i<5){
+            if(i < cardsPerLine){
                 firstCardLineStackView.addArrangedSubview(card)
+                
             }else{
                 secondCardLineStackView.addArrangedSubview(card)
+                
             }
         }
         
@@ -103,23 +129,23 @@ extension ViewController {
     
     func buildConstraints() {
         resetButton.snp.makeConstraints { make in
-            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(38)
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(32)
-            make.height.equalTo(40)
+            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(trailingInset)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(topOffset)
+            make.height.equalTo(cardsMargin)
             
         }
         
         firstCardLineStackView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(resetButton.snp.bottom).offset(40)
-            make.height.equalTo(110)
+            make.top.equalTo(resetButton.snp.bottom).offset(cardsMargin)
+            make.height.equalTo(cardsHeight)
             
         }
         
         secondCardLineStackView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(firstCardLineStackView.snp.bottom).offset(25)
-            make.height.equalTo(110)
+            make.top.equalTo(firstCardLineStackView.snp.bottom).offset(cardsSpacing)
+            make.height.equalTo(cardsHeight)
             
         }
     }
