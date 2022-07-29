@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1EDAA92EDF11D2B923DAF49D /* Pods_memory_game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E7D79DD5F8243DE3AFA364 /* Pods_memory_game.framework */; };
 		2908A1DC2889DCB300AB4E17 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2908A1DB2889DCB300AB4E17 /* MemoryGame.swift */; };
+		290A3748289448C2009BCE0B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290A3747289448C2009BCE0B /* CardView.swift */; };
 		294A83302889A51F00B67A83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294A832F2889A51F00B67A83 /* AppDelegate.swift */; };
 		294A83322889A51F00B67A83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294A83312889A51F00B67A83 /* SceneDelegate.swift */; };
 		294A83342889A51F00B67A83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294A83332889A51F00B67A83 /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		084AC9076813D8A6AA15B5AB /* Pods_memory_gameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_memory_gameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2908A1DB2889DCB300AB4E17 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
+		290A3747289448C2009BCE0B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		294A832C2889A51F00B67A83 /* memory-game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "memory-game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		294A832F2889A51F00B67A83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		294A83312889A51F00B67A83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		290A3746289448AC009BCE0B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				290A3747289448C2009BCE0B /* CardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		294A83232889A51F00B67A83 = {
 			isa = PBXGroup;
 			children = (
@@ -118,14 +128,15 @@
 		294A832E2889A51F00B67A83 /* memory-game */ = {
 			isa = PBXGroup;
 			children = (
+				290A3746289448AC009BCE0B /* Views */,
 				294A832F2889A51F00B67A83 /* AppDelegate.swift */,
 				294A83312889A51F00B67A83 /* SceneDelegate.swift */,
 				294A83332889A51F00B67A83 /* ViewController.swift */,
+				2908A1DB2889DCB300AB4E17 /* MemoryGame.swift */,
+				29FE1467289172710083FD6A /* String+AttributedText.swift */,
 				294A83382889A52100B67A83 /* Assets.xcassets */,
 				294A833A2889A52100B67A83 /* LaunchScreen.storyboard */,
 				294A833D2889A52100B67A83 /* Info.plist */,
-				2908A1DB2889DCB300AB4E17 /* MemoryGame.swift */,
-				29FE1467289172710083FD6A /* String+AttributedText.swift */,
 			);
 			path = "memory-game";
 			sourceTree = "<group>";
@@ -412,6 +423,7 @@
 				294A83302889A51F00B67A83 /* AppDelegate.swift in Sources */,
 				29FE1468289172710083FD6A /* String+AttributedText.swift in Sources */,
 				2908A1DC2889DCB300AB4E17 /* MemoryGame.swift in Sources */,
+				290A3748289448C2009BCE0B /* CardView.swift in Sources */,
 				294A83322889A51F00B67A83 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
