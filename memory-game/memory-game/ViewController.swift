@@ -8,28 +8,58 @@ class ViewController: UIViewController {
     lazy var resetButton: UIButton = {
         var buttonConfigs = UIButton.Configuration.borderless()
         buttonConfigs.imagePadding = 10
+        
         let button = UIButton(configuration: buttonConfigs)
+        let buttonTitle = "Reiniciar"
         
         button.setImage(UIImage(named: "restart_button"), for: .normal)
         button.addTarget(self, action: #selector(resetButtonTouched), for: .touchDown)
-        let buttonTitle = "Reiniciar"
         
         button.setAttributedTitle(buttonTitle.resetButtonTitle, for: .normal)
         button.setTitleColor(.black, for: UIControl.State.normal)
         button.semanticContentAttribute = .forceRightToLeft
         
-        
         return button
         
     }()
     
-    lazy var card: UIView = {
-        let cardView = CardView(position: 0, cardName: "elf")
-        return cardView
-    
+    lazy var cards: [CardView] = {
+        var cards = [CardView]()
+        
+        for i in 0...9{
+            let card = CardView(position: i, cardName: memoryGame.shuffledCards[i])
+            cards.append(card)
+        }
+        
+        return cards
+        
     }()
     
-    @objc func resetButtonTouched() {print("Touched!")}
+    
+    
+    lazy var firstCardLineStackView: UIStackView = {
+        let stackView = UIStackView()
+        
+        stackView.axis = .horizontal
+        stackView.alignment = .center
+        stackView.spacing = 25
+
+        return stackView
+        
+    }()
+    
+    lazy var secondCardLineStackView: UIStackView = {
+        let stackView = UIStackView()
+        
+        stackView.axis = .horizontal
+        stackView.alignment = .center
+        stackView.spacing = 25
+        
+        return stackView
+        
+    }()
+    
+    @objc func resetButtonTouched() {}
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,12 +76,28 @@ extension ViewController {
     
     func configViews() {
         view.backgroundColor = UIColor(named: "backgroundColor")
-        
+
     }
     
     func buildViews() {
         view.addSubview(resetButton)
-        view.addSubview(card)
+        view.addSubview(firstCardLineStackView)
+        view.addSubview(secondCardLineStackView)
+        
+        addCardsInStackViews()
+        
+    }
+    
+    func addCardsInStackViews(){
+        
+        for i in 0...9{
+            let card = cards[i]
+            if(i<5){
+                firstCardLineStackView.addArrangedSubview(card)
+            }else{
+                secondCardLineStackView.addArrangedSubview(card)
+            }
+        }
         
     }
     
@@ -63,8 +109,17 @@ extension ViewController {
             
         }
         
-        card.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+        firstCardLineStackView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(resetButton.snp.bottom).offset(40)
+            make.height.equalTo(110)
+            
+        }
+        
+        secondCardLineStackView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(firstCardLineStackView.snp.bottom).offset(25)
+            make.height.equalTo(110)
             
         }
     }
