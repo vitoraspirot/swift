@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "red_pokeball.pdf",
+      "filename" : "pokeball 1.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "red_pokeball@2x.pdf",
+      "filename" : "pokeball 1@2x.pdf",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "red_pokeball@3x.pdf",
+      "filename" : "pokeball 1@3x.pdf",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -17,7 +17,7 @@ extension UIImageView {
         }
         
         Nuke.loadImage(with: url,
-                       options: ImageLoadingOptions(placeholder: Images.red_pokeball()),
+                       options: ImageLoadingOptions(placeholder: Images.white_pokeball()),
                        into: self)
         
     }

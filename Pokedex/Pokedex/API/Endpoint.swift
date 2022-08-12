@@ -8,15 +8,12 @@
 import Foundation
 
 enum Endpoint {
-    case pokemonList
-    case pokemonDetails(name: String)
+    case pokemon(id: Int)
     
     var url: String {
         switch self {
-        case .pokemonList:
-            return "pokemon"
-        case .pokemonDetails(let name):
-            return "pokemon/\(name)"
+        case .pokemon(let id):
+            return "pokemon/\(id)"
         }
     }
 }

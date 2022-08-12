@@ -25,13 +25,6 @@ class API {
         
         url.appendPathComponent(endpoint.url)
         
-        switch endpoint {
-        case .pokemonList:
-            url = url.appending("limit", value:"151").appending("offset", value: "0")
-        case .pokemonDetails:
-            break
-        }
-        
         var request = URLRequest(url: url)
         
         request.httpMethod = method.rawValue

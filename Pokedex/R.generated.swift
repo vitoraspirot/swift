@@ -106,80 +106,50 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 36 colors.
+  /// This `R.color` struct is generated, and contains static references to 21 colors.
   struct color {
     /// Color `AccentColor`.
     static let accentColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentColor")
     /// Color `bug_primary`.
     static let bug_primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "bug_primary")
-    /// Color `bug_secondary`.
-    static let bug_secondary = Rswift.ColorResource(bundle: R.hostingBundle, name: "bug_secondary")
     /// Color `dark_primary`.
     static let dark_primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "dark_primary")
-    /// Color `dark_secondary`.
-    static let dark_secondary = Rswift.ColorResource(bundle: R.hostingBundle, name: "dark_secondary")
     /// Color `dragon_primary`.
     static let dragon_primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "dragon_primary")
-    /// Color `dragon_secondary`.
-    static let dragon_secondary = Rswift.ColorResource(bundle: R.hostingBundle, name: "dragon_secondary")
     /// Color `electric_primary`.
     static let electric_primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "electric_primary")
-    /// Color `electric_secondary`.
-    static let electric_secondary = Rswift.ColorResource(bundle: R.hostingBundle, name: "electric_secondary")
     /// Color `fairy_primary`.
     static let fairy_primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "fairy_primary")
-    /// Color `fairy_secondary`.
-    static let fairy_secondary = Rswift.ColorResource(bundle: R.hostingBundle, name: "fairy_secondary")
     /// Color `fighting_primary`.
     static let fighting_primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "fighting_primary")
-    /// Color `fighting_secondary`.
-    static let fighting_secondary = Rswift.ColorResource(bundle: R.hostingBundle, name: "fighting_secondary")
     /// Color `fire_primary`.
     static let fire_primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "fire_primary")
-    /// Color `fire_secondary`.
-    static let fire_secondary = Rswift.ColorResource(bundle: R.hostingBundle, name: "fire_secondary")
     /// Color `flying_primary`.
     static let flying_primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "flying_primary")
-    /// Color `flying_secondary`.
-    static let flying_secondary = Rswift.ColorResource(bundle: R.hostingBundle, name: "flying_secondary")
     /// Color `ghost_primary`.
     static let ghost_primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "ghost_primary")
-    /// Color `ghost_secondary`.
-    static let ghost_secondary = Rswift.ColorResource(bundle: R.hostingBundle, name: "ghost_secondary")
     /// Color `grass_primary`.
     static let grass_primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "grass_primary")
-    /// Color `grass_secondary`.
-    static let grass_secondary = Rswift.ColorResource(bundle: R.hostingBundle, name: "grass_secondary")
     /// Color `ground_primary`.
     static let ground_primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "ground_primary")
-    /// Color `ground_secondary`.
-    static let ground_secondary = Rswift.ColorResource(bundle: R.hostingBundle, name: "ground_secondary")
     /// Color `ice_primary`.
     static let ice_primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "ice_primary")
-    /// Color `ice_secondary`.
-    static let ice_secondary = Rswift.ColorResource(bundle: R.hostingBundle, name: "ice_secondary")
+    /// Color `label`.
+    static let label = Rswift.ColorResource(bundle: R.hostingBundle, name: "label")
     /// Color `normal_primary`.
     static let normal_primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "normal_primary")
-    /// Color `normal_secondary`.
-    static let normal_secondary = Rswift.ColorResource(bundle: R.hostingBundle, name: "normal_secondary")
     /// Color `poison_primary`.
     static let poison_primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "poison_primary")
-    /// Color `poison_secondary`.
-    static let poison_secondary = Rswift.ColorResource(bundle: R.hostingBundle, name: "poison_secondary")
     /// Color `pokedex`.
     static let pokedex = Rswift.ColorResource(bundle: R.hostingBundle, name: "pokedex")
     /// Color `psychic_primary`.
     static let psychic_primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "psychic_primary")
-    /// Color `psychic_secondary`.
-    static let psychic_secondary = Rswift.ColorResource(bundle: R.hostingBundle, name: "psychic_secondary")
     /// Color `rock_primary`.
     static let rock_primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "rock_primary")
-    /// Color `rock_secondary`.
-    static let rock_secondary = Rswift.ColorResource(bundle: R.hostingBundle, name: "rock_secondary")
+    /// Color `steel_primary`.
+    static let steel_primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "steel_primary")
     /// Color `water_primary`.
     static let water_primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "water_primary")
-    /// Color `water_secondary`.
-    static let water_secondary = Rswift.ColorResource(bundle: R.hostingBundle, name: "water_secondary")
 
     #if os(iOS) || os(tvOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
@@ -200,29 +170,11 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "bug_secondary", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func bug_secondary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.bug_secondary, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "dark_primary", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
     static func dark_primary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.dark_primary, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "dark_secondary", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func dark_secondary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.dark_secondary, compatibleWith: traitCollection)
     }
     #endif
 
@@ -236,29 +188,11 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "dragon_secondary", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func dragon_secondary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.dragon_secondary, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "electric_primary", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
     static func electric_primary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.electric_primary, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "electric_secondary", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func electric_secondary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.electric_secondary, compatibleWith: traitCollection)
     }
     #endif
 
@@ -272,29 +206,11 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "fairy_secondary", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func fairy_secondary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.fairy_secondary, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "fighting_primary", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
     static func fighting_primary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.fighting_primary, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "fighting_secondary", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func fighting_secondary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.fighting_secondary, compatibleWith: traitCollection)
     }
     #endif
 
@@ -308,29 +224,11 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "fire_secondary", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func fire_secondary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.fire_secondary, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "flying_primary", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
     static func flying_primary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.flying_primary, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "flying_secondary", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func flying_secondary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.flying_secondary, compatibleWith: traitCollection)
     }
     #endif
 
@@ -344,29 +242,11 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "ghost_secondary", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func ghost_secondary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.ghost_secondary, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "grass_primary", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
     static func grass_primary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.grass_primary, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "grass_secondary", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func grass_secondary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.grass_secondary, compatibleWith: traitCollection)
     }
     #endif
 
@@ -380,15 +260,6 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "ground_secondary", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func ground_secondary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.ground_secondary, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "ice_primary", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
@@ -398,11 +269,11 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "ice_secondary", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "label", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
-    static func ice_secondary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.ice_secondary, compatibleWith: traitCollection)
+    static func label(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.label, compatibleWith: traitCollection)
     }
     #endif
 
@@ -416,29 +287,11 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "normal_secondary", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func normal_secondary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.normal_secondary, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "poison_primary", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
     static func poison_primary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.poison_primary, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "poison_secondary", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func poison_secondary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.poison_secondary, compatibleWith: traitCollection)
     }
     #endif
 
@@ -461,15 +314,6 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "psychic_secondary", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func psychic_secondary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.psychic_secondary, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "rock_primary", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
@@ -479,11 +323,11 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "rock_secondary", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "steel_primary", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
-    static func rock_secondary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.rock_secondary, compatibleWith: traitCollection)
+    static func steel_primary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.steel_primary, compatibleWith: traitCollection)
     }
     #endif
 
@@ -493,15 +337,6 @@ struct R: Rswift.Validatable {
     @available(iOS 11.0, *)
     static func water_primary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.water_primary, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "water_secondary", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func water_secondary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.water_secondary, compatibleWith: traitCollection)
     }
     #endif
 
@@ -522,26 +357,10 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "bug_secondary", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func bug_secondary(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.bug_secondary.name)
-    }
-    #endif
-
-    #if os(watchOS)
     /// `UIColor(named: "dark_primary", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func dark_primary(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.dark_primary.name)
-    }
-    #endif
-
-    #if os(watchOS)
-    /// `UIColor(named: "dark_secondary", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func dark_secondary(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.dark_secondary.name)
     }
     #endif
 
@@ -554,26 +373,10 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "dragon_secondary", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func dragon_secondary(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.dragon_secondary.name)
-    }
-    #endif
-
-    #if os(watchOS)
     /// `UIColor(named: "electric_primary", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func electric_primary(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.electric_primary.name)
-    }
-    #endif
-
-    #if os(watchOS)
-    /// `UIColor(named: "electric_secondary", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func electric_secondary(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.electric_secondary.name)
     }
     #endif
 
@@ -586,26 +389,10 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "fairy_secondary", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func fairy_secondary(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.fairy_secondary.name)
-    }
-    #endif
-
-    #if os(watchOS)
     /// `UIColor(named: "fighting_primary", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func fighting_primary(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.fighting_primary.name)
-    }
-    #endif
-
-    #if os(watchOS)
-    /// `UIColor(named: "fighting_secondary", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func fighting_secondary(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.fighting_secondary.name)
     }
     #endif
 
@@ -618,26 +405,10 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "fire_secondary", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func fire_secondary(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.fire_secondary.name)
-    }
-    #endif
-
-    #if os(watchOS)
     /// `UIColor(named: "flying_primary", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func flying_primary(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.flying_primary.name)
-    }
-    #endif
-
-    #if os(watchOS)
-    /// `UIColor(named: "flying_secondary", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func flying_secondary(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.flying_secondary.name)
     }
     #endif
 
@@ -650,26 +421,10 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "ghost_secondary", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func ghost_secondary(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.ghost_secondary.name)
-    }
-    #endif
-
-    #if os(watchOS)
     /// `UIColor(named: "grass_primary", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func grass_primary(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.grass_primary.name)
-    }
-    #endif
-
-    #if os(watchOS)
-    /// `UIColor(named: "grass_secondary", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func grass_secondary(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.grass_secondary.name)
     }
     #endif
 
@@ -682,14 +437,6 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "ground_secondary", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func ground_secondary(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.ground_secondary.name)
-    }
-    #endif
-
-    #if os(watchOS)
     /// `UIColor(named: "ice_primary", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func ice_primary(_: Void = ()) -> UIKit.UIColor? {
@@ -698,10 +445,10 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "ice_secondary", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "label", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
-    static func ice_secondary(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.ice_secondary.name)
+    static func label(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.label.name)
     }
     #endif
 
@@ -714,26 +461,10 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "normal_secondary", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func normal_secondary(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.normal_secondary.name)
-    }
-    #endif
-
-    #if os(watchOS)
     /// `UIColor(named: "poison_primary", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func poison_primary(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.poison_primary.name)
-    }
-    #endif
-
-    #if os(watchOS)
-    /// `UIColor(named: "poison_secondary", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func poison_secondary(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.poison_secondary.name)
     }
     #endif
 
@@ -754,14 +485,6 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "psychic_secondary", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func psychic_secondary(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.psychic_secondary.name)
-    }
-    #endif
-
-    #if os(watchOS)
     /// `UIColor(named: "rock_primary", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func rock_primary(_: Void = ()) -> UIKit.UIColor? {
@@ -770,10 +493,10 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "rock_secondary", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "steel_primary", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
-    static func rock_secondary(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.rock_secondary.name)
+    static func steel_primary(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.steel_primary.name)
     }
     #endif
 
@@ -782,14 +505,6 @@ struct R: Rswift.Validatable {
     @available(watchOSApplicationExtension 4.0, *)
     static func water_primary(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.water_primary.name)
-    }
-    #endif
-
-    #if os(watchOS)
-    /// `UIColor(named: "water_secondary", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func water_secondary(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.water_secondary.name)
     }
     #endif
 
@@ -1101,15 +816,15 @@ struct R: Rswift.Validatable {
 
   /// This `R.image` struct is generated, and contains static references to 2 images.
   struct image {
-    /// Image `red_pokeball`.
-    static let red_pokeball = Rswift.ImageResource(bundle: R.hostingBundle, name: "red_pokeball")
+    /// Image `pokeball`.
+    static let pokeball = Rswift.ImageResource(bundle: R.hostingBundle, name: "pokeball")
     /// Image `white_pokeball`.
     static let white_pokeball = Rswift.ImageResource(bundle: R.hostingBundle, name: "white_pokeball")
 
     #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "red_pokeball", bundle: ..., traitCollection: ...)`
-    static func red_pokeball(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.red_pokeball, compatibleWith: traitCollection)
+    /// `UIImage(named: "pokeball", bundle: ..., traitCollection: ...)`
+    static func pokeball(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokeball, compatibleWith: traitCollection)
     }
     #endif
 
@@ -1215,7 +930,7 @@ struct _R: Rswift.Validatable {
       let name = "LaunchScreen"
 
       static func validate() throws {
-        if UIKit.UIImage(named: "red_pokeball", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'red_pokeball' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "pokeball", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'pokeball' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }

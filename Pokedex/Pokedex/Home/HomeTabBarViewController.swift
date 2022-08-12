@@ -29,8 +29,16 @@ class HomeTabBarViewController: UITabBarController {
     }
     
     func configViews() {
-        self.tabBar.tintColor = .white
-        self.tabBar.barTintColor = Colors.pokedex()
+        self.tabBar.tintColor = Colors.label()
+        
+        let barAppearence = UIBarAppearance()
+        barAppearence.backgroundColor = Colors.pokedex()
+        barAppearence.shadowColor = .clear
+        
+        let appearence = UITabBarAppearance(barAppearance: barAppearence)
+        
+        self.tabBar.standardAppearance = appearence
+        self.tabBar.scrollEdgeAppearance = appearence
     }
     
     func buildViews() {
